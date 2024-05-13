@@ -10,7 +10,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "author": "Mouctar && Vedrine",
+  "author": "3K",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",

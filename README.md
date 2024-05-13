@@ -1,18 +1,19 @@
-						PROJET ANGULAR: MASTER 1 MIAGE
- NOM des participants:
-- DIALLO Mamadou Mouctar
-- AZIMEDEM TSAOU Vedrine Stela
+## PROJET ANGULAR: MASTER 2 MBDS
+ Nom des participants:
+- KARIMU LEILA ROXANE
+- KONAN ELIUD NICANOR
+- KONATE DOTEMIN
 
 ************************************************************************************************************************
 
-PARTIE I- CONTEXTE DU PROJET: 
+## PARTIE I- CONTEXTE DU PROJET: 
 	Réaliser une application de gestion des devoir des étudiants.
 
 ************************************************************************************************************************
 
-PARTIE II- COMMENT LANCER L'APPLICATION
+## PARTIE II- COMMENT LANCER L'APPLICATION
 
-II- 1) COMMENT LANCER L'APPLICATION EN LIGNE SUR VERSEL?
+### II- 1) COMMENT LANCER L'APPLICATION EN LIGNE SUR VERSEL?
 	Si vous souhaitez lancer l'application en ligne, suivez ces instructions:
 	-lancer l'application qui a été hébergée sur "vercel" en suivant le lien: https://angular-front-m1-miage2022-2023-x84m.vercel.app
 	- vous etes sur la page d'accueil de l'application: cliquer sur le bouton "connexion" en bleu, en haut à droite de votre écran. 
@@ -23,7 +24,7 @@ II- 1) COMMENT LANCER L'APPLICATION EN LIGNE SUR VERSEL?
 		* Adresse mail: professeurClassic@yahoo.fr
 		* Mot de passe: classic123
 
-II- 2) COMMENT LANCER L'APPLICATION EN LOCALHOST SUR VOTRE ORDINATEUR?
+### II- 2) COMMENT LANCER L'APPLICATION EN LOCALHOST SUR VOTRE ORDINATEUR?
 	Si vous souhaitez lancer l'application en localHost, suivez ces instructions:
 
 1) étape 1: Récupération du projet sur git
@@ -46,14 +47,14 @@ II- 2) COMMENT LANCER L'APPLICATION EN LOCALHOST SUR VOTRE ORDINATEUR?
 		* Lancer le frontend à l'aide de la comande: "npm run ng serve ou ng serve"
 		* Ainsi, vous pourrez ouvrir l'application en local si vous le souhaitez
 
-II- 3) TUTORIEL POUR LE FONCTIONNEMENT DE L?APPLICATION:	
+### II- 3) TUTORIEL POUR LE FONCTIONNEMENT DE L?APPLICATION:	
 Une fois que vous avez accès à l'application:
 	- suivez ce mini tutoriel vidéo afin de voir le fonctionnement de l'application: https://youtu.be/BuxbK9BLd0c
 	- vous pouvez également trouver les explications sur les différentes fonctionnalités du projet dans la suite de ce document(PARTIE III- DIFFERENTES FONCTIONNALITES DU PROJET)
 
 
 *************************************************************************************************************************
-PARTIE III- DIFFERENTES FONCTIONNALITES DU PROJET:
+## PARTIE III- DIFFERENTES FONCTIONNALITES DU PROJET:
  
 1) l'Autentification: 
 	- Un utilisateur peut s'authentifier dans l'application en entrant son adresse mail et son mot de passe attribué

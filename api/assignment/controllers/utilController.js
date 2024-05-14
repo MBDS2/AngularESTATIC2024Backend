@@ -10,13 +10,13 @@ const addCourse = (req, res) => {
         if (err){
             res.json({err: err})
         }
-        res.json({msg: `Le course ${course.name} a été bien ajouté`})
+        res.json({msg: `Le course ${course.name} a bien été bien ajouté`})
     })
 }
 const getCourses = (req, res) =>{
     Course.find((err, courses) => {
         if(err){
-            res.json({err: "il y a un probleme avec les course"})
+            res.json({err: "Attention ! il y a un problème avec les cours"})
         }
         res.json(courses)
     })
@@ -30,13 +30,13 @@ const addStudent = (req, res) => {
         if (err){
             res.json({err: err})
         }
-        res.json({msg: `L'etudiant ${student.name} a été bien ajouté`})
+        res.json({msg: `L'etudiant ${student.name} a bien été ajouté`})
     })
 }
 const getStudents = (req, res) =>{
     Student.find((err, students) => {
         if(err){
-            res.json({err: "il y a un probleme avec les etudiants"})
+            res.json({err: "Attention ! il y a un problème avec les étudiants"})
         }
         res.json(students)
     })

@@ -14,10 +14,10 @@ const getAll = (req, res) =>{
 }
 
 const addUser = (req, res) => {
-    console.log("je fais un post")
+    console.log("Je fais un ajout (post)")
     User.findOne({ email: req.body.email }).then((user) => {
         if (user) {
-            return res.json({msg: "Cet email existe dejq"});
+            return res.json({msg: "Cet email est déjà associé à un compte utilisteur"});
         } else {
             const avatar = gravatar.url(req.body.email, {
                 s: 200, // Size
@@ -41,11 +41,11 @@ const addUser = (req, res) => {
                     user.save()
                         .then((user, err) =>{
                             if (err){
-                                return  res.json({msg: "Echec de l'enregistrement"})
+                                return  res.json({msg: "Enregistrement échoué. Veuillez réessayer"})
                             }
-                            return res.json({msg: `L'utilisateur ${user.name} a été  ajouté`})
+                            return res.json({msg: `L'utilisateur ${user.name} a été ajouté`})
                         })
-                        .catch(err => res.json({message: 'Echec de l\'enregistrement'}))
+                        .catch(err => res.json({message: 'Enregistrement échoué. Veuillez réessayer'}))
                 });
             });
         }
@@ -71,14 +71,14 @@ const login = (req, res) => {
     User.findOne({ email }).then((user) => {
         console.log(user)
         if (!user) {
-            return res.json({msg: "Cet utilisateur n'existe pas"});
+            return res.json({msg: "Désolé ! cet utilisateur n'existe pas"});
         }
-        console.log("je me log en base")
+        console.log("Je me log à la base")
         bcrypt.compare(password, user.password).then((isMatch) => {
             if (isMatch) {
                 res.json( {msg: "bearer "+obtenirUntoken({id: user.id, name: user.name, email: user.email, role: user.role})})
             } else {
-                return res.json({msg :"Le mot de passe est incorrect"});
+                return res.json({msg :"Désolé ! Le mot de passe est incorrect"});
             }
         });
     });
@@ -94,17 +94,17 @@ const deleteUser = (req, res) => {
     console.log(req.params.id);
     User.findByIdAndRemove(req.params.id, (err, user) => {
         if(err){
-            return res.json({ msg: "Cet utilisateur n'existe pas"})
+            return res.json({ msg: "Désolé ! cet utilisateur n'existe pas"})
         }
         res.json({
-            msg: `l'utilisateur ${user.name} a été supprimé`
+            msg: `L'utilisateur ${user.name} a bien été supprimé`
         })
     });
 
 }
 
 const updateUser = (req, res) => {
-    console.log("UPDATE recu User : ");
+    console.log("Mise à jour d'utilisteur réussie : ");
     let user = {
         id: req.body.id,
         _id: req.body._id,
@@ -122,9 +122,9 @@ const updateUser = (req, res) => {
 
             User.findByIdAndUpdate(req.params.id,user, {new: true}, (err, user) => {
                 if(err){
-                    res.json({msg: 'impossible de mettre à jour cet utilisateur'})
+                    res.json({msg: 'Impossible de mettre à jour cet utilisateur'})
                 }
-                res.json({msg: `l'utilisateur ${user.name} a été mis à jour`})
+                res.json({msg: `L'utilisateur ${user.name} a bien été mis à jour`})
             })
         });
     });

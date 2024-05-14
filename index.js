@@ -11,8 +11,6 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);
 
-
-
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -20,7 +18,7 @@ const options = {
 mongoose.set('strictQuery', false);
 mongoose
     .connect(mongodbURI, options)
-    .then(() => console.log("MongoDB connected"))
+    .then(() => console.log("Connecté à MongoDB"))
     .catch((err) => console.log(err));
 
 // Pour accepter les connexions cross-domain (CORS)
@@ -57,5 +55,3 @@ app.listen(port, "0.0.0.0");
 console.log('Serveur démarré sur http://localhost:' + port);
 
 module.exports = app;
-
-

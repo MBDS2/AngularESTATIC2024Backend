@@ -3,10 +3,10 @@ let Assignment = require('../models/assignment');
 // Récupérer tous les assignments (GET)
 function getAssignments(req, res){
 
-    console.log("Je fais un get")
+    console.log("Je fais une récupération(get)")
     Assignment.find((err, assignments) => {
         if(err){
-            res.json({msg: "Aucun assignment trouve"})
+            res.json({msg: "Aucun assignment trouvé"})
         }
 
         res.send(assignments);
@@ -26,7 +26,7 @@ function getAssignment(req, res){
 // Ajout d'un assignment (POST)
 function postAssignment(req, res){
     let assignment = new Assignment();
-    console.log("Je fais un post")
+    console.log("Je fais un ajout (post)")
     assignment.id = req.body.id;
     assignment.name = req.body.name;
     assignment.deadLine = req.body.deadLine;
@@ -39,26 +39,26 @@ function postAssignment(req, res){
     assignment.comment = req.body.comment;
 
 
-    console.log("POST assignment reçu :");
+    console.log("Ajout de l'assignment réussi :");
     console.log(assignment)
 
     assignment.save( (err) => {
         if(err){
-            res.json({err: "il y a eu erreur lors de l'ajout de l'assignment"});
+            res.json({err: "Il y a eu une erreur lors de l'ajout de l'assignment"});
         }
         res.json({ msg: `Le devoir ${assignment.name} a été ajouté`})
     })
 }
 
 function updateAssignment(req, res) {
-    console.log("UPDATE recu assignment : ");
+    console.log("Mise de jour l'assignment réussie : ");
     console.log(req.body)
     Assignment.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, obj) => {
         if (err) {
             console.log(err);
-         return  res.json({err: 'impossible de mettre à jour ce devoir'})
+         return  res.json({err: 'Impossible de mettre à jour ce devoir'})
         }
-        res.json({msg: `le devoir ${req.body.name} a été mis à jour`})
+        res.json({msg: `Le devoir ${req.body.name} a bien été mis à jour`})
     });
 
 }
@@ -69,7 +69,7 @@ function deleteAssignment(req, res) {
         if (err) {
             res.send(err);
         }
-        res.json({msg: `le devoir ${assignment.name} a été supprimé`});
+        res.json({msg: `Le devoir ${assignment.name} a bien été supprimé`});
     })
 }
 

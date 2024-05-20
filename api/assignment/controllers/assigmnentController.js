@@ -3,7 +3,7 @@ let Assignment = require('../models/assignment');
 // Récupérer tous les assignments (GET)
 function getAssignments(req, res){
 
-    console.log("Je fais une récupération(get)")
+    console.log("Je fais une récupération d'assignment")
     Assignment.find((err, assignments) => {
         if(err){
             res.json({msg: "Aucun assignment trouvé"})
@@ -26,7 +26,7 @@ function getAssignment(req, res){
 // Ajout d'un assignment (POST)
 function postAssignment(req, res){
     let assignment = new Assignment();
-    console.log("Je fais un ajout (post)")
+    console.log("Je fais un ajout d'assignment")
     assignment.id = req.body.id;
     assignment.name = req.body.name;
     assignment.deadLine = req.body.deadLine;

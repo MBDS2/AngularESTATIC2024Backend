@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const mongodbURI = require('./api/utils/keys').mongodbURI
+const atlasUri = require('./api/utils/keys').atlasUri
 const assignment = require('./api/assignment/routes/routesAssignment');
 const user = require('./api/assignment/routes/routesUser');
 const util = require('./api/assignment/routes/routesUtil')
@@ -17,8 +17,8 @@ const options = {
 };
 mongoose.set('strictQuery', false);
 mongoose
-    .connect(mongodbURI, options)
-    .then(() => console.log("Connecté à MongoDB"))
+    .connect(atlasUri, options)
+    .then(() => console.log("Connecté à MongoDB Atlas !"))
     .catch((err) => console.log(err));
 
 // Pour accepter les connexions cross-domain (CORS)
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 8015;
+const port = process.env.PORT || 8010;
 
 // les routes
 const prefix = '/api';

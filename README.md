@@ -41,12 +41,12 @@ Pour lancer l'application en ligne, veuillez suivre ces étapes :
 1- Accédez à l'application hébergée sur "RENDER" en utilisant le lien suivant : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 
 2- Pour vous connecter en tant qu'administrateur, utilisez les identifiants suivants :
-Adresse mail : xxxxxxxxxxxxxxxxx
-Mot de passe : xxxxxxxxxxxxxxxxx
+Adresse mail : konate1@mbds.com
+Mot de passe : esatic123
 
 3- Si vous souhaitez vous connecter en tant qu'utilisateur Standard, utilisez les identifiants suivants :
-Adresse mail :  xxxxxxxxxxxxxxxxx
-Mot de passe :  xxxxxxxxxxxxxxxxx
+Adresse mail :  kydas@mbds.com
+Mot de passe :  esatic123
 
 
 ## EN LOCAL

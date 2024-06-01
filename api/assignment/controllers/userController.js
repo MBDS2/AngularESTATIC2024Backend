@@ -14,15 +14,14 @@ const getAll = (req, res) =>{
 }
 
 const addUser = (req, res) => {
-    console.log("Je fais un ajout (post)")
     User.findOne({ email: req.body.email }).then((user) => {
         if (user) {
             return res.json({msg: "Cet email est déjà associé à un compte utilisteur"});
         } else {
             const avatar = gravatar.url(req.body.email, {
-                s: 200, // Size
-                r: "pg", // Rating
-                d: "mm", // Default
+                s: 200,
+                r: "pg",
+                d: "mm",
             });
 
             const user = new User();
@@ -50,8 +49,6 @@ const addUser = (req, res) => {
             });
         }
     });
-
-
 }
 
 const getCurrentUser = (req, res) => {
@@ -104,7 +101,6 @@ const deleteUser = (req, res) => {
 }
 
 const updateUser = (req, res) => {
-    console.log("Mise à jour d'utilisteur réussie : ");
     let user = {
         id: req.body.id,
         _id: req.body._id,
@@ -112,7 +108,8 @@ const updateUser = (req, res) => {
         email: req.body.email,
         password: req.body.password,
         role: req.body.role
-        }
+    }
+
     bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(user.password, salt, (err, hash) => {
             if (err) throw err;
@@ -128,7 +125,6 @@ const updateUser = (req, res) => {
             })
         });
     });
-
 }
 
 module.exports = {addUser, getAll, getCurrentUser, login,deleteUser, updateUser}

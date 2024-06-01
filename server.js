@@ -21,7 +21,7 @@ mongoose
     .then(() => console.log("Connecté à MongoDB Atlas !"))
     .catch((err) => console.log(err));
 
-// Pour accepter les connexions cross-domain (CORS)
+// Configuration de CORS
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "*");
@@ -32,22 +32,12 @@ app.use((req, res, next) => {
 // Pour les formulaires
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
 const port = process.env.PORT || 8010;
-
-// les routes
 const prefix = '/api';
 
-//Route pour les assignments
-
 app.use(prefix, assignment)
-
-//Route pour les utilisateurs
-
 app.use(prefix, user)
-
 app.use(prefix, util)
-
 app.use(prefix, image);
 
 // On démarre le serveur

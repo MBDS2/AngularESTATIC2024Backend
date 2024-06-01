@@ -1,9 +1,6 @@
 let Assignment = require('../models/assignment');
 
-// Récupérer tous les assignments (GET)
 function getAssignments(req, res){
-
-    console.log("Je fais une récupération d'assignment")
     Assignment.find((err, assignments) => {
         if(err){
             res.json({msg: "Aucun assignment trouvé"})
@@ -12,8 +9,6 @@ function getAssignments(req, res){
         res.send(assignments);
     });
 }
-
-// Récupérer un assignment par son id (GET)
 function getAssignment(req, res){
     let assignmentId = req.params.id;
 
@@ -23,10 +18,8 @@ function getAssignment(req, res){
     })
 }
 
-// Ajout d'un assignment (POST)
 function postAssignment(req, res){
     let assignment = new Assignment();
-    console.log("Je fais un ajout d'assignment")
     assignment.id = req.body.id;
     assignment.name = req.body.name;
     assignment.deadLine = req.body.deadLine;
@@ -37,11 +30,6 @@ function postAssignment(req, res){
     assignment.course.teacherPhoto = req.body.course.teacherPhoto;
     assignment.mark = req.body.mark;
     assignment.comment = req.body.comment;
-
-
-    console.log("Ajout de l'assignment réussi :");
-    console.log(assignment)
-
     assignment.save( (err) => {
         if(err){
             res.json({err: "Il y a eu une erreur lors de l'ajout de l'assignment"});
@@ -51,7 +39,6 @@ function postAssignment(req, res){
 }
 
 function updateAssignment(req, res) {
-    console.log("Mise de jour l'assignment réussie : ");
     console.log(req.body)
     Assignment.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, obj) => {
         if (err) {
@@ -72,7 +59,5 @@ function deleteAssignment(req, res) {
         res.json({msg: `Le devoir ${assignment.name} a bien été supprimé`});
     })
 }
-
-
 
 module.exports = { getAssignments, postAssignment, getAssignment, updateAssignment, deleteAssignment };

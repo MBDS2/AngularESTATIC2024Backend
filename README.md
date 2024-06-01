@@ -40,8 +40,8 @@ Pour accéder au backend en ligne, veuillez suivre ces étapes :
 Ainsi que l'application web via celui-ci : xxxxxxxxxxx
 
 2- Pour vous connecter en tant qu'administrateur, utilisez les identifiants suivants :
-Adresse mail : xxxxxxxxxxxxxxxxx
-Mot de passe : xxxxxxxxxxxxxxxxx
+Adresse mail : konat1@mbds.com
+Mot de passe : esatic123
 
 3- Si vous souhaitez vous connecter en tant qu'utilisateur Standard, utilisez les identifiants suivants :
 Adresse mail :  kydas@mbds.com

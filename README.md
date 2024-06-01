@@ -11,8 +11,6 @@ Développement d'une application de gestion des devoirs étudiants
 # II- PRESENTATION DU PROJET
 Ce projet vise à proposer une solution complète et fiable pour la gestion des devoirs, en combinant une interface utilisateur intuitive avec un backend robuste. Les fonctionnalités essentielles incluent la création, la modification et la suppression des devoirs, ainsi que des options avancées comme l'authentification et l'autorisation des utilisateurs. Grâce à cette solution, la gestion des devoirs devient plus efficace et sécurisée, répondant de manière optimale aux besoins des utilisateurs.
 
-
-
 # III- Liens Utiles pour la mise en place du BACKEND : 
 
 Modèle et Schéma :
@@ -37,16 +35,17 @@ Nous avons utilisé ChatGPT pour nous assurer que les liens sont facilement reco
 # IV INSTRUCTIONS POUR LANCER LE PROJET 
 
 ## EN LIGNE SUR : RENDER 
-Pour lancer l'application en ligne, veuillez suivre ces étapes :
-1- Accédez à l'application hébergée sur "RENDER" en utilisant le lien suivant : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+Pour accéder au backend en ligne, veuillez suivre ces étapes :
+1- Accédez à l'application hébergée sur "RENDER" en utilisant le lien suivant :https://backend-angular-a5t5.onrender.com/api/assignments.
+Ainsi que l'application web via celui-ci : xxxxxxxxxxx
 
 2- Pour vous connecter en tant qu'administrateur, utilisez les identifiants suivants :
-Adresse mail : xxxxxxxxxxxxxxxxx
-Mot de passe : xxxxxxxxxxxxxxxxx
+Adresse mail : konat1@mbds.com
+Mot de passe : esatic123
 
 3- Si vous souhaitez vous connecter en tant qu'utilisateur Standard, utilisez les identifiants suivants :
-Adresse mail :  xxxxxxxxxxxxxxxxx
-Mot de passe :  xxxxxxxxxxxxxxxxx
+Adresse mail :  kydas@mbds.com
+Mot de passe :  esatic123
 
 
 ## EN LOCAL

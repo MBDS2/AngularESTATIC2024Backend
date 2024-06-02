@@ -6,13 +6,11 @@ const assignment = require('./api/assignment/routes/routesAssignment');
 const user = require('./api/assignment/routes/routesUser');
 const util = require('./api/assignment/routes/routesUtil');
 const image = require('./api/assignment/routes/routesImage');
-const cors = require('cors');
 
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);
 
-app.use(cors());
 
 const options = {
     useNewUrlParser: true,
@@ -32,12 +30,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// pour la mise en ligne
-app.use(cors({
-    origin: 'https://frontend-angular-a5t5.onrender.com',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-}));
   
 // Pour les formulaires
 app.use(bodyParser.urlencoded({extended: true}));

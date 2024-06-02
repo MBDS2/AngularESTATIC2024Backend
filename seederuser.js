@@ -7,21 +7,21 @@ mongoose.connect(atlasUri, { useNewUrlParser: true, useUnifiedTopology: true });
 const usersData = [
     {
         id: '1',
-        name: 'Konate',
+        name: 'Konaté Dotémin',
         email: 'konate@mbds.com',
-        // password: 'esatic123',
-        password: '$2y$10$2Mpddyq3rgYyTAsJF.Sk9eudPob3/qK5Q6A28OUEktNcJgEa6ICva',
+        // password: 'mbds2024',
+        password: '$2y$10$9jL56V7TlpUbPyAzWyT6teb/ocoxajcfrk5LT9pdEVfOcWMAGvb3i',
         role: 'admin',
-        photo: 'lien_vers_photo'
+        photo: 'photos'
     },
     {
         id: '2',
-        name: 'Kydas',
-        email: 'kydas@mbds.com',
-        // password: 'esatic123',
-        password: '$2y$10$2Mpddyq3rgYyTAsJF.Sk9eudPob3/qK5Q6A28OUEktNcJgEa6ICva',
+        name: 'Konan Nicanor',
+        email: 'nicanor@mbds.com',
+        // password: 'mbds2024',
+        password: '$2y$10$9jL56V7TlpUbPyAzWyT6teb/ocoxajcfrk5LT9pdEVfOcWMAGvb3i',
         role: 'user',
-        photo: 'lien_vers_photo'
+        photo: 'photos'
     },
 ];
 

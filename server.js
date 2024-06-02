@@ -4,12 +4,15 @@ const bodyParser = require('body-parser');
 const atlasUri = require('./api/utils/keys').atlasUri
 const assignment = require('./api/assignment/routes/routesAssignment');
 const user = require('./api/assignment/routes/routesUser');
-const util = require('./api/assignment/routes/routesUtil')
-const image = require('./api/assignment/routes/routesImage')
+const util = require('./api/assignment/routes/routesUtil');
+const image = require('./api/assignment/routes/routesImage');
+const cors = require('cors');
 
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);
+
+app.use(cors());
 
 const options = {
     useNewUrlParser: true,

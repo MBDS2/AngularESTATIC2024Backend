@@ -8,18 +8,18 @@ const usersData = [
     {
         id: '1',
         name: 'Konaté Dotémin',
-        email: 'konate@mbds.com',
-        // password: 'mbds2024',
-        password: '$2y$10$9jL56V7TlpUbPyAzWyT6teb/ocoxajcfrk5LT9pdEVfOcWMAGvb3i',
+        email: 'konate@gmail.com',
+        // password: '1234',
+        password: '$2y$10$XeSLrnuqroN1HwyWdnPD4ecmfc2TJPA7UT.gBp1x0ABo90GB0Go2O',
         role: 'admin',
         photo: 'photos'
     },
     {
         id: '2',
         name: 'Konan Nicanor',
-        email: 'nicanor@mbds.com',
-        // password: 'mbds2024',
-        password: '$2y$10$9jL56V7TlpUbPyAzWyT6teb/ocoxajcfrk5LT9pdEVfOcWMAGvb3i',
+        email: 'nicanor@gmail.com',
+        // password: '1234',
+        password: '$2y$10$XeSLrnuqroN1HwyWdnPD4ecmfc2TJPA7UT.gBp1x0ABo90GB0Go2O',
         role: 'user',
         photo: 'photos'
     },

@@ -29,6 +29,13 @@ app.use((req, res, next) => {
     next();
 });
 
+// pour la mise en ligne
+app.use(cors({
+    origin: 'https://frontend-angular-a5t5.onrender.com',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+}));
+  
 // Pour les formulaires
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());

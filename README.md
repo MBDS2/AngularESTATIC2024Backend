@@ -44,13 +44,10 @@ Adresse mail : konate@mbds.com
 Mot de passe : mbds2024
 
 3- Si vous souhaitez vous connecter en tant qu'utilisateur Standard, utilisez les identifiants suivants :
-Adresse mail :  konate@mbds.com
+Adresse mail :  nicanor@mbds.com
 Mot de passe :  mbds2024
 
 Adresse mail :  roxane@mbds.com
-Mot de passe :  mbds2024
-
-Adresse mail :  konan@mbds.com
 Mot de passe :  mbds2024
 
 

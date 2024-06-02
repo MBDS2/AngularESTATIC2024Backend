@@ -40,7 +40,7 @@ Pour accéder au backend en ligne, veuillez suivre ces étapes :
 Ainsi que l'application web via celui-ci : https://frontend-angular-zbb6.onrender.com
 
 2- Pour vous connecter en tant qu'administrateur, utilisez les identifiants suivants :
-Adresse mail : nicanor@mbds.com
+Adresse mail : konate@mbds.com
 Mot de passe : mbds2024
 
 3- Si vous souhaitez vous connecter en tant qu'utilisateur Standard, utilisez les identifiants suivants :

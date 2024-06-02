@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const atlasUri = require('./api/utils/keys').atlasUri
+const cors = require('cors'); // Ajout de l'importation de cors
+
+const atlasUri = require('./api/utils/keys').atlasUri;
 const assignment = require('./api/assignment/routes/routesAssignment');
 const user = require('./api/assignment/routes/routesUser');
 const util = require('./api/assignment/routes/routesUtil');
@@ -9,13 +11,13 @@ const image = require('./api/assignment/routes/routesImage');
 
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-//mongoose.set('debug', true);
 
-
+// Configuration des options de connexion à MongoDB
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true
 };
+
 mongoose.set('strictQuery', false);
 mongoose
     .connect(atlasUri, options)
@@ -23,27 +25,24 @@ mongoose
     .catch((err) => console.log(err));
 
 // Configuration de CORS
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "*");
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-    next();
-});
+app.use(cors()); // Utilisation de cors pour gérer les en-têtes CORS automatiquement
 
-  
 // Pour les formulaires
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 const port = process.env.PORT || 8010;
 const prefix = '/api';
 
-app.use(prefix, assignment)
-app.use(prefix, user)
-app.use(prefix, util)
+// Utilisation des routes
+app.use(prefix, assignment);
+app.use(prefix, user);
+app.use(prefix, util);
 app.use(prefix, image);
 
-// On démarre le serveur
-app.listen(port, "0.0.0.0");
-console.log('Serveur démarré sur http://localhost:' + port);
+// Démarrage du serveur
+app.listen(port, "0.0.0.0", () => {
+    console.log('Serveur démarré sur http://localhost:' + port);
+});
 
 module.exports = app;

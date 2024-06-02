@@ -37,15 +37,21 @@ Nous avons utilisé ChatGPT pour nous assurer que les liens sont facilement reco
 ## EN LIGNE SUR : RENDER 
 Pour accéder au backend en ligne, veuillez suivre ces étapes :
 1- Accédez à l'application hébergée sur "RENDER" en utilisant le lien suivant :https://backend-angular-a5t5.onrender.com/api/assignments.
-Ainsi que l'application web via celui-ci : xxxxxxxxxxx
+Ainsi que l'application web via celui-ci : https://frontend-angular-zbb6.onrender.com
 
 2- Pour vous connecter en tant qu'administrateur, utilisez les identifiants suivants :
-Adresse mail : konat1@mbds.com
-Mot de passe : esatic123
+Adresse mail : nicanor@mbds.com
+Mot de passe : mbds2024
 
 3- Si vous souhaitez vous connecter en tant qu'utilisateur Standard, utilisez les identifiants suivants :
-Adresse mail :  kydas@mbds.com
-Mot de passe :  esatic123
+Adresse mail :  konate@mbds.com
+Mot de passe :  mbds2024
+
+Adresse mail :  roxane@mbds.com
+Mot de passe :  mbds2024
+
+Adresse mail :  konan@mbds.com
+Mot de passe :  mbds2024
 
 
 ## EN LOCAL

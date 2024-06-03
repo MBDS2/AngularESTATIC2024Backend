@@ -11,7 +11,7 @@ Développement d'une application de gestion des devoirs étudiants
 # II- PRESENTATION DU PROJET
 Ce projet vise à proposer une solution complète et fiable pour la gestion des devoirs, en combinant une interface utilisateur intuitive avec un backend robuste. Les fonctionnalités essentielles incluent la création, la modification et la suppression des devoirs, ainsi que des options avancées comme l'authentification et l'autorisation des utilisateurs. Grâce à cette solution, la gestion des devoirs devient plus efficace et sécurisée, répondant de manière optimale aux besoins des utilisateurs.
 
-# III- Liens Utiles pour la mise en place du BACKEND : 
+# III- Liens Utiles pour la mise en place du BACKEND avec ORM mongoos: 
 
 Modèle et Schéma :
 Nous avons créé le modèle à travers le schéma en utilisant les ressources suivantes :
